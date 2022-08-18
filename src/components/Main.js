@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Row, Col } from 'antd';
 import axios from 'axios';
-import { NEARBY_SATELLITE, SAT_API_KEY, STARLINK_CATEGORY } from '../constant';
+import { NEARBY_SATELLITE, SAT_API_KEY, STARLINK_CATEGORY } from '../constant.js';
 import SatSetting from './SatSetting';
 import SatelliteList from './SatelliteList';
 import WorldMap from './WorldMap';
@@ -10,9 +10,9 @@ class Main extends Component {
     constructor(){
         super();
         this.state = {
-            satInfo: null,
-            satList: null,
-            setting: null,
+            setting: {},
+            satInfo: {},
+            satList: [],
             isLoadingList: false
         }
     }
@@ -70,4 +70,3 @@ class Main extends Component {
     }
 }
 export default Main;
-

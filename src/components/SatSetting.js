@@ -4,19 +4,18 @@ import { Form, Button, InputNumber } from "antd";
 class SatSettingForm extends Component {
     render() {
         const { getFieldDecorator } = this.props.form;
-        const formItemLayout = {
-            labelCol: {
-                xs: { span: 24 },
-                sm: { span: 11 }
-            },
-            wrapperCol: {
-                xs: { span: 24 },
-                sm: { span: 13 }
-            }
-        };
         return (
             <Form
-                {...formItemLayout}
+                name="wrap"
+                labelCol={{
+                    flex: '110px',
+                }}
+                labelAlign="left"
+                labelWrap
+                wrapperCol={{
+                    flex: 1,
+                }}
+                colon={false}
                 className="sat-setting"
                 onSubmit={this.showSatellite}
             >
@@ -109,7 +108,7 @@ class SatSettingForm extends Component {
                         />
                     )}
                 </Form.Item>
-                <Form.Item className="show-nearby">
+                <Form.Item className="show-nearby" >
                     <Button
                         type="primary"
                         htmlType="submit"
