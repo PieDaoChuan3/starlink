@@ -24,15 +24,16 @@ class SatSettingForm extends Component {
                         rules: [
                             {
                                 required: true,
-                                message: "Please input your Longitude"
+                                message: "Please input your Longitude (-180 ~ 180)"
                             }
-                        ]
+                        ],
+                        initialValue: 70
                     })(
                         <InputNumber
                             min={-180}
                             max={180}
                             style={{ width: "100%" }}
-                            placeholder="Please input Longitude"
+                            placeholder="Please input Longitude (-180 ~ 180)"
                         />
                     )}
                 </Form.Item>
@@ -42,12 +43,13 @@ class SatSettingForm extends Component {
                         rules: [
                             {
                                 required: true,
-                                message: "Please input your Latitude"
+                                message: "Please input your Latitude (-90 ~ 90)"
                             }
-                        ]
+                        ],
+                        initialValue: -40
                     })(
                         <InputNumber
-                            placeholder="Please input Latitude"
+                            placeholder="Please input Latitude (-90 ~ 90)"
                             min={-90}
                             max={90}
                             style={{ width: "100%" }}
@@ -60,12 +62,13 @@ class SatSettingForm extends Component {
                         rules: [
                             {
                                 required: true,
-                                message: "Please input your Elevation"
+                                message: "Please input your Elevation (-413 ~ 8850)"
                             }
-                        ]
+                        ],
+                        initialValue: 100
                     })(
                         <InputNumber
-                            placeholder="Please input Elevation"
+                            placeholder="Please input Elevation (-413 ~ 8850)"
                             min={-413}
                             max={8850}
                             style={{ width: "100%" }}
@@ -78,12 +81,13 @@ class SatSettingForm extends Component {
                         rules: [
                             {
                                 required: true,
-                                message: "Please input your Altitude"
+                                message: "Please input your Altitude (0 ~ 90)"
                             }
-                        ]
+                        ],
+                        initialValue: 90
                     })(
                         <InputNumber
-                            placeholder="Please input Altitude"
+                            placeholder="Please input Altitude (0 ~ 90)"
                             min={0}
                             max={90}
                             style={{ width: "100%" }}
@@ -96,12 +100,13 @@ class SatSettingForm extends Component {
                         rules: [
                             {
                                 required: true,
-                                message: "Please input your Duration"
+                                message: "Please input your Duration (0 ~ 90)"
                             }
-                        ]
+                        ],
+                        initialValue: 10
                     })(
                         <InputNumber
-                            placeholder="Please input Duration"
+                            placeholder="Please input Duration (0 ~ 90)"
                             min={0}
                             max={90}
                             style={{ width: "100%" }}
